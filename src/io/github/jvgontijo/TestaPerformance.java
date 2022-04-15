@@ -44,7 +44,7 @@ public class TestaPerformance {
 			numerosSet.contains(numero);
 		}
 		long fimBuscaHashSet = System.currentTimeMillis();
-		System.out.println("Tempo de execução de Busca no HashSet: " + (fimBuscaHashSet - fimBuscaHashSet) + "ms");
+		System.out.println("Tempo de execução de Busca no HashSet: " + (fimBuscaHashSet - inicioBuscaHashSet) + "ms");
 		
 		long fim2 = System.currentTimeMillis();
 		
