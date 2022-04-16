@@ -55,4 +55,8 @@ public class Curso {
 				+ ", Tempo Total: " + this.getTempoTotal() 
 				+ " minutos. Aulas: " + aulas + "]";
 	}
+
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
+	}
 }

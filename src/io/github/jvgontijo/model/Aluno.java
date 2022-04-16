@@ -22,4 +22,16 @@ public class Aluno {
 	public String toString() {
 		return "[ Aluno: " + this.nome + ", Matrícula: " + this.numeroMatricula + "]";
 	}
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		Aluno aluno = (Aluno) obj;
+		return this.nome.equals(aluno.getNome());
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
+	}
 }
