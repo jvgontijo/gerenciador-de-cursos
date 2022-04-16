@@ -1,5 +1,7 @@
 package io.github.jvgontijo.model;
 
+import java.util.Objects;
+
 public class Aluno {
 	
 	private String nome;
@@ -25,16 +27,33 @@ public class Aluno {
 	public String toString() {
 		return "[ Aluno: " + this.nome + ", Matrícula: " + this.numeroMatricula + "]";
 	}
-	
-	
-	@Override
-	public boolean equals(Object obj) {
-		Aluno aluno = (Aluno) obj;
-		return this.nome.equals(aluno.getNome());
-	}
-	
+
 	@Override
 	public int hashCode() {
-		return this.nome.hashCode();
+		return Objects.hash(nome, numeroMatricula);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && numeroMatricula == other.numeroMatricula;
+	}
+
+//	@Override
+//	public boolean equals(Object obj) {
+//		Aluno aluno = (Aluno) obj;
+//		return this.nome.equals(aluno.getNome());
+//	}
+//	
+//	@Override
+//	public int hashCode() {
+//		return this.nome.hashCode();
+//	}
+	
 }
