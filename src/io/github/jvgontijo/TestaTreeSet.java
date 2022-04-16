@@ -1,5 +1,6 @@
 package io.github.jvgontijo;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,8 +18,14 @@ public class TestaTreeSet {
 		recibos.add(r2.getCodigo());
 		recibos.add(r1.getCodigo());
 		
-		recibos.forEach(codigo -> {
-			System.out.println("Código do recibo: " + codigo);
-		});
+//		recibos.forEach(codigo -> {
+//			System.out.println("Código do recibo: " + codigo);
+//		});
+		
+		Iterator<Integer> iterador = recibos.iterator();
+		while (iterador.hasNext()) {
+			System.out.println(iterador.next());
+			
+		}
 	}
 }

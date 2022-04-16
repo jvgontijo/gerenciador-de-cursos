@@ -23,8 +23,8 @@ public class Recibo implements Comparable<Recibo> {
 		return this.codigo == r.codigo;
 	}
 	
-//	@Override
-//	public String toString() {
-//		return "[ Recibo: " + this.codigo + "]";
-//	}
+	@Override
+	public String toString() {
+		return "[ Recibo: " + this.codigo + "]";
+	}
 }
